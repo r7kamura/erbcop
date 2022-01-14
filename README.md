@@ -1,5 +1,7 @@
 # Erbcop
 
+[![test](https://github.com/r7kamura/erbcop/actions/workflows/test.yml/badge.svg)](https://github.com/r7kamura/erbcop/actions/workflows/test.yml)
+
 [RuboCop](https://github.com/rubocop/rubocop) runner for ERB template.
 
 ## Installation
