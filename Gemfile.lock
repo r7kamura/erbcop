@@ -49,9 +49,9 @@ PLATFORMS
 
 DEPENDENCIES
   erbcop!
-  rake (~> 13.0)
-  rspec (~> 3.0)
-  rubocop (~> 1.21)
+  rake
+  rspec
+  rubocop
   rubocop-rspec
 
 BUNDLED WITH
