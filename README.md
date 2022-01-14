@@ -4,6 +4,8 @@
 
 [RuboCop](https://github.com/rubocop/rubocop) runner for ERB template.
 
+This is the ERB version of [Slimcop](https://github.com/r7kamura/slimcop).
+
 ## Installation
 
 Add this line to your application's Gemfile:
