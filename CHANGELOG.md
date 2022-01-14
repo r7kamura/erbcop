@@ -1,5 +1,8 @@
-## [Unreleased]
+# Changelog
 
-## [0.1.0] - 2022-01-15
+## Unreleased
 
-- Initial release
+### Added
+
+- Initial release.
+- Add almost the same features as slimcop 0.11.0.
