@@ -1,5 +1,6 @@
 # Erbcop
 
+[![Gem Version](https://badge.fury.io/rb/erbcop.svg)](https://rubygems.org/gems/erbcop)
 [![test](https://github.com/r7kamura/erbcop/actions/workflows/test.yml/badge.svg)](https://github.com/r7kamura/erbcop/actions/workflows/test.yml)
 
 [RuboCop](https://github.com/rubocop/rubocop) runner for ERB template.
