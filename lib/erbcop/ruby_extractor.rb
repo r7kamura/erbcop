@@ -37,26 +37,5 @@ module Erbcop
         template_language: :html
       ).ast.descendants(:code)
     end
-
-    # @return [Array<Array<Integer>>]
-    def ranges
-      result = []
-      traverse(ast) do |begin_, end_|
-        result << [begin_, end_]
-      end
-      result
-    end
-
-    def traverse(node, &block)
-      return unless node.instance_of?(::Array)
-
-      if node[0] == :erbi && node[1] == :position
-        block.call(node[2], node[3])
-      else
-        node.each do |element|
-          traverse(element, &block)
-        end
-      end
-    end
   end
 end
