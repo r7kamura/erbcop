@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "erbcop/version"
+require_relative 'erbcop/version'
 
 module Erbcop
   class Error < StandardError; end
