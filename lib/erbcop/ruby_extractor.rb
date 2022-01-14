@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require 'erbi'
+require 'better_html'
+require 'better_html/parser'
 
 module Erbcop
   # Extract Ruby codes from Erb source.
@@ -14,22 +15,27 @@ module Erbcop
 
     # @return [Array<Hash>]
     def call
-      ranges.map do |(begin_, end_)|
-        clipped = RubyClipper.new(@source[begin_...end_]).call
+      nodes.map do |node|
+        snippet = node.children.first
+        clipped = RubyClipper.new(snippet).call
         {
           code: clipped[:code],
-          offset: begin_ + clipped[:offset]
+          offset: node.location.begin_pos + clipped[:offset]
         }
       end
     end
 
     private
 
-    # @return [Array] Erb AST, represented in S-expression.
-    def ast
-      ::Erbi::Filters::Interpolation.new.call(
-        ::Erbi::Parser.new(file: @file_path).call(@source)
-      )
+    # @return [Enumerator<BetterHtml::AST::Node>]
+    def nodes
+      ::BetterHtml::Parser.new(
+        ::Parser::Source::Buffer.new(
+          @file_path,
+          source: @source
+        ),
+        template_language: :html
+      ).ast.descendants(:code)
     end
 
     # @return [Array<Array<Integer>>]

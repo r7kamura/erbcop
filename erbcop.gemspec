@@ -28,4 +28,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
   spec.metadata['rubygems_mfa_required'] = 'true'
+
+  spec.add_dependency 'better_html'
+  spec.add_dependency 'rainbow'
+  spec.add_dependency 'rubocop', '>= 0.87'
 end
