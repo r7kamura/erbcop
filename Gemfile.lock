@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    erbcop (0.1.0)
+    erbcop (0.2.0)
       better_html
       templatecop
 
