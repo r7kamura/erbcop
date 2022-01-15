@@ -30,6 +30,5 @@ Gem::Specification.new do |spec|
   spec.metadata['rubygems_mfa_required'] = 'true'
 
   spec.add_dependency 'better_html'
-  spec.add_dependency 'rainbow'
-  spec.add_dependency 'rubocop', '>= 0.87'
+  spec.add_dependency 'templatecop'
 end

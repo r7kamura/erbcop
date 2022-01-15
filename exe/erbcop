@@ -3,5 +3,13 @@
 
 $LOAD_PATH.unshift File.expand_path('../lib', __dir__)
 require 'erbcop'
+require 'templatecop'
 
-Erbcop::Cli.new(ARGV).call
+Templatecop::Cli.call(
+  default_configuration_path: File.expand_path('../default.yml', __dir__),
+  default_path_patterns: %w[**/*.erb],
+  executable_name: 'erbcop',
+  implicit_configuration_paths: %w[.erbcop.yml .rubocop.yml],
+  ruby_extractor: Erbcop::RubyExtractor
+)
+

@@ -3,8 +3,7 @@ PATH
   specs:
     erbcop (0.1.0)
       better_html
-      rainbow
-      rubocop (>= 0.87)
+      templatecop
 
 GEM
   remote: https://rubygems.org/
@@ -84,6 +83,9 @@ GEM
       rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
     smart_properties (1.17.0)
+    templatecop (0.1.0)
+      parser
+      rubocop (>= 0.87)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
