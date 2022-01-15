@@ -12,4 +12,3 @@ Templatecop::Cli.call(
   implicit_configuration_paths: %w[.erbcop.yml .rubocop.yml],
   ruby_extractor: Erbcop::RubyExtractor
 )
-
