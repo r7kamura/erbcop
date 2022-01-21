@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Fixed
+
+- Exclude code in ERB comment.
+
 ## 0.2.0 - 2022-01-15
 
 ### Changed
