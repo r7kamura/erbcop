@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    erbcop (0.2.1)
+    erbcop (0.3.0)
       better_html
       templatecop
 
@@ -83,7 +83,8 @@ GEM
       rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
     smart_properties (1.17.0)
-    templatecop (0.1.0)
+    templatecop (0.2.0)
+      parallel
       parser
       rubocop (>= 0.87)
     tzinfo (2.0.4)
