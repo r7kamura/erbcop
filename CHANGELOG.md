@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 0.2.1 - 2022-01-22
+
 ### Fixed
 
 - Exclude code in ERB comment.
