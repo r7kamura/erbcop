@@ -42,15 +42,29 @@ module Erbcop
 
     private
 
+    # @return [Array<BetterHtml::AST::Node>]
+    def erbs
+      root.descendants(:erb).reject do |erb|
+        erb.children.first&.type == :indicator && erb.children.first&.to_a&.first == '#'
+      end
+    end
+
     # @return [Enumerator<BetterHtml::AST::Node>]
     def nodes
+      erbs.flat_map do |erb|
+        erb.descendants(:code).to_a
+      end
+    end
+
+    # @return [BetterHtml::AST::Node]
+    def root
       ::BetterHtml::Parser.new(
         ::Parser::Source::Buffer.new(
           @file_path,
           source: @source
         ),
         template_language: :html
-      ).ast.descendants(:code)
+      ).ast
     end
   end
 end
