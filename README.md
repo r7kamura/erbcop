@@ -63,3 +63,21 @@ spec/fixtures/dummy.erb:5:4: C: [Correctable] Style/NegatedIf: Favor unless over
 
 1 file inspected, 4 offenses detected, 4 offenses auto-correctable
 ```
+
+### Configuration
+
+Erbcop will start looking for the configuration file in the following locations:
+
+1. /path/to/project/.erbcop.yml
+2. /path/to/project/.rubocop.yml
+
+For example, if you want to disable some cops on erbcop, you can add the following file to your project:
+
+```yaml
+# .erbcop.yml
+inherit_from:
+  - .rubocop.yml
+
+Foo/Bar:
+  Enabled: false
+```
