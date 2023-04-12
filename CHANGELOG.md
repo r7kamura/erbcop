@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 0.5.0 - 2023-04-12
+
 - Disable Style/RedundantLineContinuation by default and requires rubocop 1.49+ for that.
 
 ## 0.4.0 - 2022-01-22
