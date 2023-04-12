@@ -3,6 +3,7 @@ PATH
   specs:
     erbcop (0.4.0)
       better_html
+      rubocop (>= 1.49)
       templatecop
 
 GEM
@@ -36,6 +37,7 @@ GEM
     html_tokenizer (0.0.7)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
+    json (2.6.3)
     loofah (2.13.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -43,7 +45,7 @@ GEM
     nokogiri (1.13.1-x86_64-linux)
       racc (~> 1.4)
     parallel (1.21.0)
-    parser (3.1.0.0)
+    parser (3.2.2.0)
       ast (~> 2.4.1)
     racc (1.6.0)
     rails-dom-testing (2.0.3)
@@ -68,17 +70,18 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.3)
-    rubocop (1.24.1)
+    rubocop (1.49.0)
+      json (~> 2.3)
       parallel (~> 1.10)
-      parser (>= 3.0.0.0)
+      parser (>= 3.2.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
-      rexml
-      rubocop-ast (>= 1.15.1, < 2.0)
+      rexml (>= 3.2.5, < 4.0)
+      rubocop-ast (>= 1.28.0, < 2.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.15.1)
-      parser (>= 3.0.1.1)
+      unicode-display_width (>= 2.4.0, < 3.0)
+    rubocop-ast (1.28.0)
+      parser (>= 3.2.1.0)
     rubocop-rspec (2.7.0)
       rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
@@ -89,7 +92,7 @@ GEM
       rubocop (>= 0.87)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    unicode-display_width (2.1.0)
+    unicode-display_width (2.4.2)
 
 PLATFORMS
   x86_64-linux
