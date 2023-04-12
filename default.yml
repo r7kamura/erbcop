@@ -112,6 +112,9 @@ Style/NestedTernaryOperator:
 Style/Next:
   Enabled: false
 
+Style/RedundantLineContinuation:
+  Enabled: false
+
 Style/RescueModifier:
   Enabled: false
 
