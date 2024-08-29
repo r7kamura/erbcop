@@ -7,6 +7,9 @@
 
 This is the ERB version of [Slimcop](https://github.com/r7kamura/slimcop).
 
+> [!WARNING]
+> This gem has been deprecated. Please consider using [rubocop-erb](https://github.com/r7kamura/rubocop-erb) instead.
+
 ## Installation
 
 Add this line to your application's Gemfile:
